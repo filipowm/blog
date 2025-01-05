@@ -5,9 +5,45 @@ description: A simple example of a Markdown blog post.
 tags: [Markdown, Blogging, Demo]
 category: Examples
 draft: false
+discussionsEnabled: true
 ---
 
 # An h1 header
+
+ABC 
+```java
+public static void main(String[] args) {
+    System.out.println("Hello, world!");
+}
+```
+
+```js title="my-test-file.js"
+console.log('Title attribute example')
+```
+
+```html
+<!-- src/content/index.html -->
+<div>File name comment example</div>
+```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, world!")
+}
+```
+
+```dockerfile
+FROM node:14
+
+WORKDIR /app
+RUN npm install
+COPY . .
+CMD ["node", "index.js"]
+```
 
 Paragraphs are separated by a blank line.
 

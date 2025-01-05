@@ -44,6 +44,9 @@ importers:
       '@iconify/svelte':
         specifier: ^4.0.2
         version: 4.0.2(svelte@5.2.2)
+      '@storyblok/astro':
+        specifier: ^5.1.2
+        version: 5.1.2(astro@4.16.13(@types/node@22.8.2)(lightningcss@1.27.0)(rollup@2.79.2)(sass@1.80.4)(stylus@0.63.0)(terser@5.36.0)(typescript@5.6.3))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^4.0.0
         version: 4.0.0(svelte@5.2.2)(vite@5.4.10(@types/node@22.8.2)(lightningcss@1.27.0)(sass@1.80.4)(stylus@0.63.0)(terser@5.36.0))
@@ -1473,6 +1476,17 @@ packages:
 
   '@shikijs/vscode-textmate@9.3.0':
     resolution: {integrity: sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==}
+
+  '@storyblok/astro@5.1.2':
+    resolution: {integrity: sha512-Fy9Y71dyX3C/WERXFyRBYrmjQmd4xaYr9UcyaT+vV0lXQy6i4SDo41hMJmcx5YXgVyWm+LQBtCTUaBSvjRm3WA==}
+    peerDependencies:
+      astro: ^3.0.0 || ^4.0.0 || ^5.0.0
+
+  '@storyblok/js@3.1.9':
+    resolution: {integrity: sha512-N8QB/yn8wQxM+G9kV/RHTsynuTyaMNwiAI2KFiwuT9QPo+Zea4EmikNJY1KxrA1Q8G8YiZEm7OBp1B3QDycA6g==}
+
+  '@storyblok/richtext@3.0.2':
+    resolution: {integrity: sha512-KBLx9ycNVMyVnNyPiwBH5g9uWmiJpMzp9YvpnnADXlPLoksusrwI56BusSM8HaIgJgcnB5RR0LvhySkPFdC8Zg==}
 
   '@surma/rollup-plugin-off-main-thread@2.2.3':
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
@@ -3075,6 +3089,9 @@ packages:
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
+  lodash.mergewith@4.6.2:
+    resolution: {integrity: sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==}
+
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
@@ -4257,6 +4274,9 @@ packages:
   stdin-discarder@0.2.2:
     resolution: {integrity: sha512-UhDfHmA92YAlNnCfhmq0VeNL5bDbiZGg7sZ2IvPsXubGkiNa9EC+tUTsjBRsYUAz87btI6/1wf4XoVvQ3uRnmQ==}
     engines: {node: '>=18'}
+
+  storyblok-js-client@6.10.6:
+    resolution: {integrity: sha512-4n/n6tkLu3kmZwb2aSZgwqGta8DodbQbGjuclWY+A6xsmrVWrRBytUs+5lvJVTGkshLflVPhufeO4j/1zvVSPQ==}
 
   stream-replace-string@2.0.0:
     resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
@@ -6256,6 +6276,20 @@ snapshots:
 
   '@shikijs/vscode-textmate@9.3.0': {}
 
+  '@storyblok/astro@5.1.2(astro@4.16.13(@types/node@22.8.2)(lightningcss@1.27.0)(rollup@2.79.2)(sass@1.80.4)(stylus@0.63.0)(terser@5.36.0)(typescript@5.6.3))':
+    dependencies:
+      '@storyblok/js': 3.1.9
+      astro: 4.16.13(@types/node@22.8.2)(lightningcss@1.27.0)(rollup@2.79.2)(sass@1.80.4)(stylus@0.63.0)(terser@5.36.0)(typescript@5.6.3)
+      camelcase: 8.0.0
+      lodash.mergewith: 4.6.2
+
+  '@storyblok/js@3.1.9':
+    dependencies:
+      '@storyblok/richtext': 3.0.2
+      storyblok-js-client: 6.10.6
+
+  '@storyblok/richtext@3.0.2': {}
+
   '@surma/rollup-plugin-off-main-thread@2.2.3':
     dependencies:
       ejs: 3.1.10
@@ -8166,6 +8200,8 @@ snapshots:
 
   lodash.merge@4.6.2: {}
 
+  lodash.mergewith@4.6.2: {}
+
   lodash.uniq@4.5.0: {}
 
   lodash@4.17.21: {}
@@ -9725,6 +9761,8 @@ snapshots:
   stable@0.1.8: {}
 
   stdin-discarder@0.2.2: {}
+
+  storyblok-js-client@6.10.6: {}
 
   stream-replace-string@2.0.0: {}
 

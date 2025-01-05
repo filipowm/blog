@@ -21,6 +21,8 @@ enum I18nKey {
   postCount = 'postCount',
   postsCount = 'postsCount',
 
+  discussionsTitle = 'discussionsTitle',
+
   themeColor = 'themeColor',
 
   lightMode = 'lightMode',
